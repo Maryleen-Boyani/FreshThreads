@@ -1,117 +1,66 @@
-"use client";
-import { useState } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-import IconButton from "@mui/material/IconButton";
-import {
-  Box,
-  List,
-  ListItem,
-  Container,
-  Typography,
-  Divider,
-  Button,
-  Drawer,
-  CssBaseline,
-  ListItemButton,
-  ListItemText,
-  AppBar,
-  Toolbar,
-} from "@mui/material";
+import { Box, Button, Grid2, Typography } from "@mui/material";
 
-const drawerWidth = 240;
-//An array of the nav items
-const navItems = ["Home", "About", "Booking", "Delivery"];
-
-export default function DrawerApp(props) {
-  const { window } = props;
-  //setting the current state of the mobile to false
-  const [isMobile, setIsMobile] = useState(false);
-  // toggling the mobile drawer open/close state
-
-  const handleDrawerApp = () => {
-    setIsMobile((prevState) => !prevState);
-  };
-
-  //what one sees in the mobile view
-  const drawer = (
-    <Box
-      onClick={handleDrawerApp}
-      sx={{ bgcolor: "#cdf5f5", height: "100vh", padding: 10 }}
-    >
-      <Typography variant="h6" sx={{ my: 2 }}>
-        FreshThreads
-      </Typography>
-
-      <List>
-        {navItems.map(
-          (
-            item //the paranthesis are used to write js functions
-          ) => (
-            <ListItem key={item} disablePadding>
-              <ListItemButton sx={{ textAlign: "center" }}>
-                <ListItemText primary={item} />
-              </ListItemButton>
-            </ListItem>
-          )
-        )}
-      </List>
-    </Box>
-  );
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+export default function Home() {
   return (
-    //in xl screens
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <AppBar component="nav">
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerApp}
-            sx={{ mr: 2, display: { sm: "none" } }}
+    <Box
+      sx={{
+        width: "100vw",
+        height: "100vh",
+        bgcolor: "#aed6f1",
+      }}
+    >
+      <Box>
+        <Grid2 container spacing={2} alignItems="center">
+          <Grid2
+            size={{ xs: 12, md: 6 }}
+            sx={{ paddingLeft: 3, paddingRight: 2 }}
           >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h5" sx={{ flexGrow: 1 }}>
-            FreshThreads
-          </Typography>
-          <Box
-            sx={{
-              display: { xs: "none", sm: "flex" },
-              justifyContent: "flex-end",
-            }}
+            <Typography
+              variant="h3"
+              sx={{ mt: "15vh", fontSize: "5rem", fontWeight: "bold" }}
+            >
+              Nairobi's First Choice in Dry Cleaning
+            </Typography>
+            <Typography sx={{ mb: 2 }}>
+              A tradition of unsurpassed customer service and unwavering
+              commitment to quality has made us Nairobi's first choice in dry
+              cleaning.
+            </Typography>
+            <Button variant="contained" color="primary">
+              Sign Up For Free Pickup & Delivery
+            </Button>
+          </Grid2>
+          <Grid2
+            size={{ xs: 12, md: 6 }}
+            sx={{ paddingLeft: 3, paddingRight: 2 }}
           >
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: "white" }}>
-                {item}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
-
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={isMobile}
-          onClose={handleDrawerApp}
-          ModalProps={{ keepMounted: true }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
+            <Box
+              component="img"
+              src="img/laundry2.jpg"
+              alt="Banner 1"
+              sx={{ paddingTop: 8 }}
+            />
+          </Grid2>
+        </Grid2>
+      </Box>
+      <Box
+        sx={{
+          position: "absolute",
+          left: "15%",
+          width: "70%",
+          height: "60vh", // Adjust height as needed
+          bgcolor: "black",
+          zIndex: 1, // Ensures it stays on top
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          borderRadius: "16px", // Rounded corners
+        }}
+      >
+        <Typography variant="h1" sx={{ color: "white" }}>
+          FreshThreads
+        </Typography>
+      </Box>
     </Box>
   );
 }
-//function that is used to reset the state of the isMobile
