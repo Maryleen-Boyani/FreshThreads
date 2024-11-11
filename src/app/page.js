@@ -1,4 +1,12 @@
-import { Box, Button, Grid2, Typography } from "@mui/material";
+import {
+  Box,
+  Card,
+  Button,
+  CardContent,
+  CardMedia,
+  Grid2,
+  Typography,
+} from "@mui/material";
 
 export default function Home() {
   return (
@@ -43,23 +51,73 @@ export default function Home() {
           </Grid2>
         </Grid2>
       </Box>
+      {/* the box that contains the cards */}
       <Box
         sx={{
           position: "absolute",
+          padding: 10,
           left: "15%",
           width: "70%",
-          height: "60vh", // Adjust height as needed
-          bgcolor: "black",
+          // Adjust height as needed
+          bgcolor: "white",
           zIndex: 1, // Ensures it stays on top
           display: "flex",
+          gap: 6,
+          marginTop: 10,
           alignItems: "center",
           justifyContent: "center",
           borderRadius: "16px", // Rounded corners
         }}
       >
-        <Typography variant="h1" sx={{ color: "white" }}>
-          FreshThreads
-        </Typography>
+        {/* first card */}
+        <Card sx={{ bgcolor: "white", fontWeight: 2, width: 500, height: 150 }}>
+          <CardContent>
+            <CardMedia
+              sx={{ minWidth: 100 }}
+              // image={fold}
+              alt="Fetching..."
+            ></CardMedia>
+            <Typography variant="h6" sx={{ color: "black" }}>
+              Sorting & pre-stain treatment
+            </Typography>
+          </CardContent>
+        </Card>
+        {/* second card */}
+        <Card sx={{ bgcolor: "white", width: 600, height: 150 }}>
+          <CardContent>
+            <Typography variant="h6" sx={{ color: "black" }}>
+              Wash and Rinse
+            </Typography>
+          </CardContent>
+        </Card>
+        {/*third card */}
+        <Card sx={{ bgcolor: "white", width: 500, height: 150 }}>
+          <CardContent>
+            <Typography variant="h6" sx={{ color: "black" }}>
+              Air Dry/ Machine Dry
+            </Typography>
+          </CardContent>
+        </Card>
+        {/*fourth card */}
+        <Card sx={{ bgcolor: "white", width: 500, height: 150 }}>
+          <CardContent>
+            <Typography variant="h6" sx={{ color: "black" }}>
+              Iron & Fold
+            </Typography>
+          </CardContent>
+        </Card>
+        {/*fifth card */}
+        <Card sx={{ bgcolor: "white", width: 500, height: 150 }}>
+          <CardContent>
+            <Typography
+              variant="h6"
+              sx={{ color: "black" }}
+              textAlign={"center"}
+            >
+              Quality check
+            </Typography>
+          </CardContent>
+        </Card>
       </Box>
     </Box>
   );

@@ -17,7 +17,7 @@ import {
 
 const drawerWidth = 240;
 //An array of the nav items
-const navItems = ["Home", "About", "Booking", "Delivery"];
+const navItems = ["Home", "About", "Booking", "Delivery", "Testing"];
 
 export default function DrawerApp() {
   //setting the current state of the mobile to false
@@ -32,7 +32,7 @@ export default function DrawerApp() {
   const drawer = (
     <Box
       onClick={handleDrawerApp}
-      sx={{ bgcolor: "#cdf5f5", height: "100vh", padding: 10 }}
+      sx={{ bgcolor: "#aed6f1", height: "100vh", padding: 10 }}
     >
       <Typography variant="h6" sx={{ my: 2 }}>
         FreshThreads
@@ -56,12 +56,11 @@ export default function DrawerApp() {
 
   return (
     //in xl screens
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", bgcolor: "#aed6f1" }}>
       <AppBar component="nav">
         <Toolbar>
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
+              aria-label="open drawer"
             edge="start"
             onClick={handleDrawerApp}
             sx={{ mr: 2, display: { sm: "none" } }}
