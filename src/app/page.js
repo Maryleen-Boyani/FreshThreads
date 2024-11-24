@@ -51,7 +51,7 @@ export default function Home() {
           </Grid2>
         </Grid2>
       </Box>
-      {/* the box that contains the cards */}
+
       <Box
         sx={{
           position: "absolute",
