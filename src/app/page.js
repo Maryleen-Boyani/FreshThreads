@@ -8,7 +8,6 @@ import {
   Typography,
 } from "@mui/material";
 
-
 export default function Home() {
   return (
     <Box
@@ -52,7 +51,7 @@ export default function Home() {
           </Grid2>
         </Grid2>
       </Box>
-  
+
       <Box
         sx={{
           position: "absolute",
@@ -63,6 +62,7 @@ export default function Home() {
           bgcolor: "white",
           zIndex: 1, // Ensures it stays on top
           display: "flex",
+
           gap: 6,
           marginTop: 10,
           alignItems: "center",
@@ -70,52 +70,77 @@ export default function Home() {
           borderRadius: "16px", // Rounded corners
         }}
       >
-       
-        <Card sx={{ bgcolor: "white", fontWeight: 2, width: 500, height: 150 }}>
+        {/* first card */}
+        <Card sx={{ bgcolor: "white", fontWeight: 2, width: 500, height: 200 }}>
           <CardContent>
             <CardMedia
-              sx={{ minWidth: 100 }}
-              // image={fold}
+              component="img"
+              sx={{ maxWidth: 345 }}
+              image="/images/sorting.jpg"
+              height="80"
               alt="Fetching..."
-            ></CardMedia>
-            <Typography variant="h6" sx={{ color: "black" }}>
+            />
+            <Typography variant="subtitle1" sx={{ color: "black" }}>
               Sorting & pre-stain treatment
             </Typography>
           </CardContent>
         </Card>
-       
-        <Card sx={{ bgcolor: "white", width: 600, height: 150 }}>
+        {/* second card */}
+        <Card sx={{ bgcolor: "white", width: 600, height: 200 }}>
           <CardContent>
-            <Typography variant="h6" sx={{ color: "black" }}>
+            <CardMedia
+              component="img"
+              sx={{ maxWidht: 345 }}
+              height="80"
+              image="/images/wash.jpg"
+              alt="Fetching..."
+            />
+            <Typography variant="subtitle1" sx={{ color: "black" }}>
               Wash and Rinse
             </Typography>
           </CardContent>
         </Card>
-        
-        <Card sx={{ bgcolor: "white", width: 500, height: 150 }}>
+        {/*third card */}
+        <Card sx={{ bgcolor: "white", width: 500, height: 200 }}>
           <CardContent>
-            <Typography variant="h6" sx={{ color: "black" }}>
-              Air Dry/ Machine Dry
+            <CardMedia
+              component="img"
+              sx={{ maxWidth: 345 }}
+              image="/images/machineDry.jpg"
+              height="80"
+              alt="Fetching..."
+            />
+            <Typography variant="subtitle1" sx={{ color: "black" }}>
+              Machine Dry
             </Typography>
           </CardContent>
         </Card>
-        
-        <Card sx={{ bgcolor: "white", width: 500, height: 150 }}>
+        <Card sx={{ bgcolor: "white", width: 500, height: 200 }}>
           <CardContent>
-            <Typography variant="h6" sx={{ color: "black" }}>
-              Iron & Fold
+            <CardMedia
+              component="img"
+              sx={{ maxWidth: 345 }}
+              image="/images/airDry.jpg"
+              height="80"
+              alt="Fetching..."
+            />
+            <Typography variant="subtitle1" sx={{ color: "black" }}>
+              Air Dry
             </Typography>
           </CardContent>
         </Card>
-       
-        <Card sx={{ bgcolor: "white", width: 500, height: 150 }}>
+        {/*fourth card */}
+        <Card sx={{ bgcolor: "white", width: 500, height: 200 }}>
           <CardContent>
-            <Typography
-              variant="h6"
-              sx={{ color: "black" }}
-              textAlign={"center"}
-            >
-              Quality check
+            <CardMedia
+              component="img"
+              sx={{ maxWidth: 345 }}
+              image="/images/iron.jpg"
+              height="80"
+              alt="Fetching..."
+            />
+            <Typography variant="subtitle1" sx={{ color: "black" }}>
+              Iron & fold
             </Typography>
           </CardContent>
         </Card>
