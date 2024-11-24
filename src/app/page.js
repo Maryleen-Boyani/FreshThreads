@@ -7,7 +7,7 @@ import {
   Grid2,
   Typography,
 } from "@mui/material";
-
+import BookingsPage from "./bookings/page";
 export default function Home() {
   return (
     <Box
@@ -17,7 +17,8 @@ export default function Home() {
         bgcolor: "#aed6f1",
       }}
     >
-      <Box>
+      <BookingsPage/>
+      {/* <Box>
         <Grid2 container spacing={2} alignItems="center">
           <Grid2
             size={{ xs: 12, md: 6 }}
@@ -44,14 +45,14 @@ export default function Home() {
           >
             <Box
               component="img"
-              src="img/laundry2.jpg"
+              src="/images/laundry2.jpg"
               alt="Banner 1"
               sx={{ paddingTop: 8 }}
             />
           </Grid2>
         </Grid2>
       </Box>
-      {/* the box that contains the cards */}
+      {/* the box that contains the cards *
       <Box
         sx={{
           position: "absolute",
@@ -69,7 +70,7 @@ export default function Home() {
           borderRadius: "16px", // Rounded corners
         }}
       >
-        {/* first card */}
+        {/* first card *
         <Card sx={{ bgcolor: "white", fontWeight: 2, width: 500, height: 150 }}>
           <CardContent>
             <CardMedia
@@ -82,7 +83,7 @@ export default function Home() {
             </Typography>
           </CardContent>
         </Card>
-        {/* second card */}
+        {/* second card *
         <Card sx={{ bgcolor: "white", width: 600, height: 150 }}>
           <CardContent>
             <Typography variant="h6" sx={{ color: "black" }}>
@@ -90,7 +91,7 @@ export default function Home() {
             </Typography>
           </CardContent>
         </Card>
-        {/*third card */}
+        {/*third card *
         <Card sx={{ bgcolor: "white", width: 500, height: 150 }}>
           <CardContent>
             <Typography variant="h6" sx={{ color: "black" }}>
@@ -98,7 +99,7 @@ export default function Home() {
             </Typography>
           </CardContent>
         </Card>
-        {/*fourth card */}
+        {/*fourth card *
         <Card sx={{ bgcolor: "white", width: 500, height: 150 }}>
           <CardContent>
             <Typography variant="h6" sx={{ color: "black" }}>
@@ -106,7 +107,7 @@ export default function Home() {
             </Typography>
           </CardContent>
         </Card>
-        {/*fifth card */}
+        {/*fifth card *
         <Card sx={{ bgcolor: "white", width: 500, height: 150 }}>
           <CardContent>
             <Typography
@@ -118,7 +119,7 @@ export default function Home() {
             </Typography>
           </CardContent>
         </Card>
-      </Box>
+      </Box> */}
     </Box>
   );
 }
