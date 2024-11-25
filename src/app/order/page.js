@@ -7,7 +7,6 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import { id } from "date-fns/locale";
 
 // Array of unique card data
 const items = [
@@ -239,7 +238,6 @@ const CardGrid = () => (
   <Grid2
     container
     spacing={3}
-   
     sx={{
       padding: "20px",
       maxWidth: "1200px",
@@ -247,7 +245,15 @@ const CardGrid = () => (
     }}
   >
     {items.map((item) => (
-      <Grid2 item xs={12} sm={6} md={4} lg={3} key={item.id} sx={{ display: "flex"}} >
+      <Grid2
+        item
+        xs={12}
+        sm={6}
+        md={4}
+        lg={3}
+        key={item.id}
+        sx={{ display: "flex" }}
+      >
         <ItemCard {...item} />
       </Grid2>
     ))}

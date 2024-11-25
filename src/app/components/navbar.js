@@ -17,7 +17,7 @@ import {
 
 const drawerWidth = 240;
 //An array of the nav items
-const navItems = ["Home", "About", "Booking", "Delivery", "Testing"];
+const navItems = ["Home", "About", "Booking"];
 
 export default function DrawerApp() {
   //setting the current state of the mobile to false
@@ -60,7 +60,7 @@ export default function DrawerApp() {
       <AppBar component="nav">
         <Toolbar>
           <IconButton
-              aria-label="open drawer"
+            aria-label="open drawer"
             edge="start"
             onClick={handleDrawerApp}
             sx={{ mr: 2, display: { sm: "none" } }}
