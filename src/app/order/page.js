@@ -7,7 +7,7 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import { id } from "date-fns/locale";
+
 
 // Array of unique card data
 const items = [
