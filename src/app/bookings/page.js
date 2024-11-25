@@ -76,36 +76,7 @@ export default function BookingsPage() {
             />
           </Grid2>
         </Grid2>
-        {/* <ServiceCard
-          title={"Stain pre-treatment"}
-          subtitle={"This is the first step"}
-          label={"Choose"}
-        />
-        <ServiceCard
-          title={"Wash"}
-          subtitle={"This is the second step"}
-          label={"Choose"}
-        />
-        <ServiceCard
-          title={"Air-Dry"}
-          subtitle={"A specific task"}
-          label={"Choose"}
-        />
-        <ServiceCard
-          title={"Machine dry"}
-          subtitle={"This is the alternative step"}
-          label={"Choose"}
-        />
-        <ServiceCard
-          title={"Iron and fold"}
-          subtitle={"This is the second last step"}
-          label={"Choose"}
-        />
-        <ServiceCard
-          title={"Quality checks"}
-          subtitle={"This is the last step"}
-          label={"Choose"}
-        /> */}
+        
       </Container>
 
       {/* Date and Time Picker Section */}

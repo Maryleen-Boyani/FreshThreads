@@ -4,20 +4,26 @@ import {
   Button,
   CardContent,
   CardMedia,
+  Container,
   Grid2,
   Typography,
 } from "@mui/material";
-
+import Footer from "./components/footer";
+import WhyChooseUs from "./components/whyUs";
+import AffordablePrices from "./components/prices";
+import DrawerApp from "./components/navbar";
+import HowItWorks from "./components/howItWorks";
 export default function Home() {
   return (
-    <Box>
-      <Box
-        sx={{
-          width: "100vw",
-          height: "100vh",
-          bgcolor: "#aed6f1",
-        }}
-      >
+    <Box
+      sx={{
+        width: "100vw",
+        height: "100vh",
+        bgcolor: "#aed6f1",
+      }}
+    >
+      <DrawerApp />
+      <Box>
         <Box>
           <Grid2 container spacing={2} alignItems="center">
             <Grid2
@@ -55,7 +61,7 @@ export default function Home() {
 
         <Box
           sx={{
-            position: "absolute",
+            marginLeft: "100px",
             padding: 10,
             left: "15%",
             width: "70%",
@@ -77,6 +83,7 @@ export default function Home() {
           >
             <CardContent>
               <CardMedia
+                backgroundColor="#024788"
                 component="img"
                 sx={{ maxWidth: 345 }}
                 image="/images/sorting.jpg"
@@ -93,7 +100,7 @@ export default function Home() {
             <CardContent>
               <CardMedia
                 component="img"
-                sx={{ maxWidht: 345 }}
+                sx={{ maxWidth: 345 }}
                 height="80"
                 image="/images/wash.jpg"
                 alt="Fetching..."
@@ -110,6 +117,7 @@ export default function Home() {
                 component="img"
                 sx={{ maxWidth: 345 }}
                 image="/images/machineDry.jpg"
+                color="#024788"
                 height="80"
                 alt="Fetching..."
               />
@@ -148,6 +156,10 @@ export default function Home() {
             </CardContent>
           </Card>
         </Box>
+        <WhyChooseUs />
+        <AffordablePrices />
+        <HowItWorks />
+        <Footer />
       </Box>
     </Box>
   );
