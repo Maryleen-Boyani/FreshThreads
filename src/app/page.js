@@ -8,6 +8,8 @@ import {
   Typography,
 } from "@mui/material";
 
+
+
 export default function Home() {
   return (
     <Box
@@ -17,6 +19,7 @@ export default function Home() {
         bgcolor: "#aed6f1",
       }}
     >
+      <Box>
       <Box>
         <Grid2 container spacing={2} alignItems="center">
           <Grid2
@@ -144,6 +147,7 @@ export default function Home() {
             </Typography>
           </CardContent>
         </Card>
+      </Box>
       </Box>
     </Box>
   );
